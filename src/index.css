@@ -8546,7 +8546,6 @@ readers do not read off random characters that represent icons */
   --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
 }
 
-
 .far,
 .fa-regular {
   font-weight: 400;
@@ -8574,7 +8573,7 @@ body {
 body {
   color: #000;
   line-height: 1;
-  font-family: "sf";
+  font-family: "RussoOne", sans-serif;
   font-size: 0.875rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -8689,22 +8688,22 @@ h6 {
      object-fit: contain;
 }
 
-.page {
-  overflow: auto;
-}
-
 .navbar {
-  background-color: white;
-  width: 55px;
-  height: 100%;
+  position:fixed;
+  border: black 1px solid;
+  border-width: 0 1px 1px 1px;
+  border-radius: 0 10px 10px 0;
+  background: rgb(7,8,101);
+  background: linear-gradient(171deg, rgba(7,8,101,1) 0%, rgb(2, 54, 211) 100%);  width: 55px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding-top: 70px;
+  margin-top: 62px;
+  color: white; 
+  height: 90vh;
 }
 
 .navbar:hover {
-  width: 25%;
-  background-color: rgb(226, 226, 226);
+  width: 250px;
 }
 
 .navbar__block {
@@ -8714,10 +8713,23 @@ h6 {
   display: flex;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar__block:hover {
+  scale: 1.03;
+  color: white;
+  background-color: #805EE4;
+  border-radius: 15px;
+}
+
+.navbar__block:first-child{
+  padding-top: 20px;
 }
 
 .navbar__block:last-child {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .navbar__title {
@@ -8728,12 +8740,11 @@ h6 {
 .header {
   position: fixed;
   width: 100vw;
-  border-radius: 0px 0px 8px 8px;
   background: rgb(23, 23, 181);
-  background: linear-gradient(87deg, rgb(23, 23, 181) 0%, rgb(84, 152, 255) 100%);
+  background: linear-gradient(87deg, rgb(6, 6, 97) 50%, rgb(20, 56, 219) 100%);
   background-size: 200% 200%;
-  -webkit-animation: gradient 9s ease infinite;
-          animation: gradient 9s ease infinite;
+  -webkit-animation: gradient 11s ease infinite;
+          animation: gradient 11s ease infinite;
   padding: 0 auto;
   color: white;
 }
@@ -8943,9 +8954,6 @@ h6 {
 }
 
 @media screen and (max-width: 1000px) {
-  .navbar:hover {
-    width: 30%;
-  }
 
   .header .form {
     display: -webkit-box;
@@ -8964,11 +8972,6 @@ h6 {
   }
 }
 
-@media screen and (max-width: 500px) {
-  .navbar:hover {
-    width: 50%;
-  }
-}
 
 @media screen and (max-width: 480px) {
   .header .logined__info {
@@ -9007,4 +9010,21 @@ h6 {
     -webkit-transition-duration: 0s;
             transition-duration: 0s;
   }
+}
+
+.content{
+  margin: 80px 30px 0 70px;
+  text-align: left;
+  font-size: 2rem ;
+  padding: 0 0 0 40px;
+}
+
+a.titles-header__title.active{
+  text-decoration: underline;
+}
+
+.page{
+  overflow: hidden;
+  height: 100vh;
+  background-color: #e4e4e4;
 }
