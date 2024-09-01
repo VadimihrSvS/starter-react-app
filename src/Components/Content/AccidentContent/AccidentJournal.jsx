@@ -1,7 +1,14 @@
 import React from 'react';
 
 export default function AccidentJournal() {
+
+    const testFunction = () => {
+
+    }
+
     return (
-        <h1>Журнал аварий</h1>
+        <div>
+            <h1>Журнал аварий</h1>
+        </div>
     );
 };
