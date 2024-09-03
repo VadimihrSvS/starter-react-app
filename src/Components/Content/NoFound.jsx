@@ -24,7 +24,7 @@ export default function NoFound() {
     }, []);
 
     const handleSendData = () => {
-        const chatId = tg.initDataUnsafe.chat.id; // Используйте ID чата из контекста Telegram
+        //const chatId = tg.initDataUnsafe.chat.id; // Используйте ID чата из контекста Telegram
         // Отправляем данные через Telegram Bot API
         fetch("https:api.telegram.org/bot6635208886:AAGqI66NmuyGEkzy2JJ97hp5iUnM35dtp6k/sendMessage", {
             method: 'POST',
@@ -32,7 +32,7 @@ export default function NoFound() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                chat_id: chatId,
+                chat_id: 1118378486,
                 text: message,
             }),
         }).then(response => response.json())
@@ -45,14 +45,14 @@ export default function NoFound() {
     };
     return (
         <div>
-            {/* {user && (
+            {user && (
                 <div>
                     <h1>Welcome to Telegram Web App</h1>
 
-                     <p>User ID: {user.id}</p>
+                    <p>User ID: {user.id}</p>
                     <p>First Name: {user.first_name}</p>
                     <p>Last Name: {user.last_name}</p>
-                    <p>Username: {user.username}</p> 
+                    <p>Username: {user.username}</p>
 
                     <h1>Send Message to Telegram Bot</h1>
 
@@ -66,6 +66,7 @@ export default function NoFound() {
                 </div>
 
 
-            )*/}</div>
+            )}
+        </div>
     );
 };
