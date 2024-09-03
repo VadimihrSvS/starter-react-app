@@ -50,10 +50,10 @@ export default function NoFound() {
                 <div>
                     <h1>Welcome to Telegram Web App</h1>
 
-                    <p>User ID: {user.id}</p>
+                    {/* <p>User ID: {user.id}</p>
                     <p>First Name: {user.first_name}</p>
                     <p>Last Name: {user.last_name}</p>
-                    <p>Username: {user.username}</p>
+                    <p>Username: {user.username}</p> */}
 
                     <h1>Send Message to Telegram Bot</h1>
 
