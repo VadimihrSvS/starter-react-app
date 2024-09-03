@@ -7,9 +7,8 @@ export default function NoFound() {
     const tg = window.Telegram.WebApp;
 
     useEffect(() => {
-        const chatId = tg.initDataUnsafe.chat.id; // Используйте ID чата из контекста Telegram
-
         // Получаем контекст из Telegram Web App SDK
+        const tg = window.Telegram.WebApp;
         tg.expand(); // Увеличить размер веб-приложения
 
         // Получаем информацию о пользователе
@@ -22,24 +21,10 @@ export default function NoFound() {
         tg.MainButton.onClick(() => {
             tg.close();
         });
-    }, [])
+    }, []);
 
     const handleSendData = () => {
         const chatId = tg.initDataUnsafe.chat.id; // Используйте ID чата из контекста Telegram
-
-        // Получаем контекст из Telegram Web App SDK
-        tg.expand(); // Увеличить размер веб-приложения
-
-        // Получаем информацию о пользователе
-        const userInfo = tg.initDataUnsafe.user;
-        setUser(userInfo);
-
-        // Показать главную кнопку Telegram и добавить обработчик нажатия
-        tg.MainButton.setText('Close');
-        tg.MainButton.show();
-        tg.MainButton.onClick(() => {
-            tg.close();
-        });
 
         // Отправляем данные через Telegram Bot API
         fetch("https:api.telegram.org/bot6635208886:AAGqI66NmuyGEkzy2JJ97hp5iUnM35dtp6k/sendMessage", {
