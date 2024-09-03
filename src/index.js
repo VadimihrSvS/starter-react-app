@@ -15,10 +15,13 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: 'reports',
+        path: 'mumg',
         children: [
           {
-            path: 'dailyReport'
+            path: 'hourMumgReport'
+          },
+          {
+            path: 'dayMumgReport'
           }
         ]
       },

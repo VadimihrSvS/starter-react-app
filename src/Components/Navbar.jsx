@@ -1,7 +1,7 @@
 import React from 'react';
 import RepliesNavbar from './Navbars/RepliesNavbar';
 import ScheduleNavbar from './Navbars/ScheduleNavbar';
-import ReportsNavbar from './Navbars/ReportsNavbar';
+import MumgNavbar from './Navbars/MumgNavbar';
 import SPORNavbar from './Navbars/SPORNavbar';
 import ObjectsNavbar from './Navbars/ObjectsNavbar';
 import AccidentNavbar from './Navbars/AccidentNavbar';
@@ -17,7 +17,7 @@ function Navbar() {
                 </Route>
                 <Route path='/schedule/*' Component={ScheduleNavbar}>
                 </Route>
-                <Route path='/reports/*' Component={ReportsNavbar}>
+                <Route path='/MUMG/*' Component={MumgNavbar}>
                 </Route>
                 <Route path='/SPOR/*' Component={SPORNavbar}>
                 </Route>

@@ -15,12 +15,12 @@ function Header() {
                     <div className="date__time"></div>
                 </a>
                 <div className="header__titles titles-header">
-                    <NavLink className="titles-header__title" to='/reports'>Доклады</NavLink>
-                    <NavLink className="titles-header__title" to='/SPOR'>СПОР</NavLink>
+                    <NavLink className="titles-header__title" to='/mumg'>Филиал Минское УМГ</NavLink>
+                    {/* <NavLink className="titles-header__title" to='/SPOR'>СПОР</NavLink>
                     <NavLink className="titles-header__title" to='/schedule'>Режимы</NavLink>
                     <NavLink className="titles-header__title" to='/replies'>Отчёты</NavLink>
                     <NavLink className="titles-header__title" to='/objects'>Объекты</NavLink>
-                    <NavLink className="titles-header__title" to='/accident'>Авария</NavLink>
+                    <NavLink className="titles-header__title" to='/accident'>Авария</NavLink> */}
                 </div>
 
 

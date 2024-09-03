@@ -6,19 +6,20 @@ import TechJournal from './Content/ObjectsContent/TechJournal';
 import CurrentReply from './Content/RepliesContent/CurrentReply';
 import CurrentWorks from './Content/SPORContent/CurrentWorks';
 import CurrentSchedule from './Content/ScheduleContent/CurrentSchedule';
-import OperationalSummary from './Content/ReportContent/OperationalSummary'
-import DailyReport from './Content/ReportContent/DailyReport'
+import HourMumgReport from './Content/MUMG/HourMumgReport'
+import DayMumgReport from './Content/MUMG/DayMumgReport'
+import NoFound from './Content/NoFound';
 function Main() {
     return (
         <main className="page">
             <Navbar />
             <div className='content'>
                 <Routes>
-                    <Route path='/' Component={OperationalSummary}>
+                    <Route path='/' Component={NoFound}>
                     </Route>
-                    <Route path='/reports' Component={OperationalSummary}>
+                    <Route path='/mumg/hourMumgReport' Component={HourMumgReport}>
                     </Route>
-                    <Route path='/reports/dailyReport' Component={DailyReport}>
+                    <Route path='/mumg/dayMumgReport' Component={DayMumgReport}>
                     </Route>
                     <Route path='/SPOR' Component={CurrentWorks}>
                     </Route>
