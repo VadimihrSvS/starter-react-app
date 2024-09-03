@@ -4,9 +4,27 @@ export default function NoFound() {
 
     const [message, setMessage] = useState('');
     const [user, setUser] = useState(null);
+    const tg = window.Telegram.WebApp;
+
+    useEffect(() => {
+        const chatId = tg.initDataUnsafe.chat.id; // Используйте ID чата из контекста Telegram
+
+        // Получаем контекст из Telegram Web App SDK
+        tg.expand(); // Увеличить размер веб-приложения
+
+        // Получаем информацию о пользователе
+        const userInfo = tg.initDataUnsafe.user;
+        setUser(userInfo);
+
+        // Показать главную кнопку Telegram и добавить обработчик нажатия
+        tg.MainButton.setText('Close');
+        tg.MainButton.show();
+        tg.MainButton.onClick(() => {
+            tg.close();
+        });
+    }, [])
 
     const handleSendData = () => {
-        const tg = window.Telegram.WebApp;
         const chatId = tg.initDataUnsafe.chat.id; // Используйте ID чата из контекста Telegram
 
         // Получаем контекст из Telegram Web App SDK
